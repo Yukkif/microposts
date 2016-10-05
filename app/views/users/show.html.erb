@@ -1,4 +1,15 @@
 <h1>
-  <%= gravatar_for @user %>
-  <%= @user.name %>
+  <p><%= gravatar_for @user %><%= @user.name %></p>
 </h1>
+<h2>ユーザー情報</h2>
+<div class="profile">
+<P>・メールアドレス</P>
+<p><%= @user.email %></p>
+<P>・地域</P>
+  <p><%= @user.region %></p>
+<p>・紹介文</p>
+  <p class="profile_box"><%= @user.profile %></p>
+<% if current_user.id == @user.id %>
+  <%= link_to "プロフィールを編集する", edit_user_path %>
+  <% end %>
+</div>
