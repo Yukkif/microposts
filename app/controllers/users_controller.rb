@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :correct_user, only:[:edit,:update]
-  before_action :set_user, only:[:show,:update,:edit, ]
+  before_action :set_user, only:[:show,:update,:edit]
 
 
   def new
@@ -51,6 +51,6 @@ class UsersController < ApplicationController
   redirect_to root_path
   else
   end
-  end
+ end
   
  end
